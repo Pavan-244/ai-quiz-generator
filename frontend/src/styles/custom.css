@@ -1,0 +1,176 @@
+/* Custom styling to provide a clean, modern look without requiring Tailwind setup */
+
+:root {
+  --bg-900: #0f1724;
+  --card-800: #111827;
+  --muted: #9ca3af;
+  --accent: #2563eb;
+  --accent-600: #1e40af;
+  --success: #16a34a;
+}
+
+body,
+#root {
+  height: 100%;
+  background: linear-gradient(180deg, var(--bg-900) 0%, #0b1220 100%);
+  color: #fff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.app-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.tab-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-600));
+  color: white;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+}
+
+.panel {
+  width: 100%;
+  max-width: 900px;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.input-url {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  outline: none;
+}
+.input-url:focus {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.8);
+}
+
+.btn {
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.question {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+.choice {
+  margin-left: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+.history-table th,
+.history-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+.history-table thead th {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.history-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 0 0.5rem;
+  }
+  .app-title {
+    font-size: 1.4rem;
+  }
+}
