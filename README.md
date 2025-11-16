@@ -172,39 +172,7 @@ uvicorn main:app --host 0.0.0.0 --port 10000
 ```
 
 5. Add environment variables (.env)
-
 ---
-
-## Frontend → **Netlify**
-
-1. `npm run build`
-2. Deploy `/dist` folder
-3. Set environment variable:
-
-```
-VITE_API_URL=https://your-render-url
-```
-
 ---
-
-# 📘 Demo Resources (Placeholders)
-
-Replace with your actual links:
-
-* 📹 **Video Presentation:** [https://drive.google.com/…](https://drive.google.com/…)
-* 🔥 **Live Demo:** [https://your-netlify-url.netlify.app](https://your-netlify-url.netlify.app)
-* 📦 **Backend API:** [https://your-render-service.onrender.com](https://your-render-service.onrender.com)
-* 🧾 **Project Report PDF:** /docs/report.pdf
-* 🗣 **Voice-over Script:** /docs/script.md
 * 📁 **GitHub Repo:** [https://github.com/yourname/ai-quiz-generator](https://github.com/Pavan-244/ai-quiz-generator/new/main?filename=README.md)
-
 ---
-
-If you want, I can also generate:
-
-✅ **Project Report PDF**
-✅ **Voice-over narration script**
-✅ **Screenshots for GitHub**
-✅ **API docs in Markdown**
-
-Just tell me!
