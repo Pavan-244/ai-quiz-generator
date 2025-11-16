@@ -6,7 +6,7 @@
 
 Transform Wikipedia Articles into Interactive, AI-Powered Quizzes
 
-<p align="center"> <img src="assets/logo.png" width="160"/> </p>
+<p align="center"> <img src="frontend/public/logo.png" width="160"/> </p>
 
 Transform Knowledge into Engaging, AI-Powered Quizzes
 
