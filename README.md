@@ -25,24 +25,33 @@ Transform any **Wikipedia article** into an interactive **AI-generated quiz** us
 
 ## 📁 Project Structure
 
-```
-ai-quiz-generator/
-│
+```ai-quiz-generator/
 ├── backend/
-│   ├── main.py
-│   ├── scraper.py
-│   ├── database.py
-│   ├── llm_quiz_generator.py
-│   ├── models.py
-│   ├── .env
-│   ├── requirements.txt
-│   └── venv/
-│
-└── frontend/
-    ├── src/
-    ├── public/
-    ├── package.json
-    └── tailwind.config.js
+│   ├── venv/                       # Python Virtual Environment
+│   ├── database.py                 # SQLAlchemy setup and Quiz model
+│   ├── models.py                   # Pydantic Schemas for LLM output (QuizOutput)
+│   ├── scraper.py                  # Functions for fetching and cleaning Wikipedia HTML
+│   ├── llm_quiz_generator.py       # LangChain setup, prompt templates, and chain logic
+│   ├── main.py                     # FastAPI application and API endpoints
+│   ├── requirements.txt            # List of all Python dependencies
+│   └── .env                        # API keys and environment variables
+|
+├── frontend/
+│   ├── src/
+│   │   ├── components/             # Reusable UI parts (e.g., QuizCard, TabButton, Modal)
+│   │   │   ├── QuizDisplay.jsx     # Reusable component for rendering generated quiz data
+│   │   │   └── HistoryTable.jsx
+│   │   ├── services/
+│   │   │   └── api.js              # Functions for communicating with the FastAPI backend
+│   │   ├── tabs/
+│   │   │   ├── GenerateQuizTab.jsx
+│   │   │   └── HistoryTab.jsx
+│   │   ├── App.jsx                 # Main React component, handles tab switching
+│   │   └── index.css               # Tailwind directives and custom styles
+│   ├── package.json
+|
+└── README.md                       # Project Setup, Endpoints, and Testing Instructions
+
 ```
 
 ---
